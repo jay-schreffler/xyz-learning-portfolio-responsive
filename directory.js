@@ -18,7 +18,7 @@ function getAllUsers(seed) {
     .then((res) => res.json())
     .then((data) => {
         const info = data.results;
-        console.log(info)
+        // console.log(info)
         info.forEach((user) => {
             //build card
             const cardContainer = document.createElement('div');
@@ -63,7 +63,6 @@ nextPageBtn.addEventListener('click', () => {
     }
     seed = seed + 1;
     getAllUsers(seed)
-    console.log(seed)
     if(seed > 101) {
         //remove cards and next button
         cards.classList.add('hide-btn')
@@ -75,13 +74,16 @@ nextPageBtn.addEventListener('click', () => {
 })
 
 prevousPageBtn.addEventListener('click', () => {
-    if(seed >= 100) {
+    if(seed === 100) {
         prevousPageBtn.classList.add('hide-btn');
-    }
+    } else {
         cards.innerHTML = ' ';
-    cards.classList.remove('hide-btn')
-    endOfResults.classList.remove('end-of-results')
-    endOfResults.innerHTML = ' ';
-    seed = seed - 1;
-    getAllUsers(seed);
+        nextPageBtn.classList.remove('hide-btn');
+        cards.classList.remove('hide-btn');
+        endOfResults.classList.remove('end-of-results');
+        endOfResults.innerHTML = ' ';
+        seed = seed - 1;
+        console.log(seed)
+        getAllUsers(seed);
+    }
 })
