@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jaldi', sans-serif;
+}
+
+/* header */
+
+header {
+    display: grid;
+    grid-template-areas: 
+        'logo nav'
+    ;
+    height: 12vh;
+    background-color: #626DD3;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    font-size: 1.6rem;
+    align-items: center;
+    grid-area: 'logo';
+}
+
+.fa-bars {
+    grid-area: 'nav';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* body */
+
+main h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 5% 0;
+}
+
+.group-filter-title {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.filter {
+    display: flex;
+    justify-content: end;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    color: #626DD3;
+}
+/* card grid */
+
+.cards {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid orange; */
+    height: 220px;
+    width: 200px;
+}
+.card-img {
+    height: 125px;
+    width: 125px;
+    border-radius: 2px;
+    /* border: 2px solid green; */
+}
+
+.card-wrapper:nth-last-child(1) {
+    margin-bottom: 3rem;
+}
+
+.card-text {
+   color: #626DD3; 
+   font-size: 1em;
+}
+
+.page-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-style {
+    margin-bottom: 2rem;
+    height: 35px;
+    width: 120px;
+    background-color: #626DD3;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.1rem;
+    margin: 5px;
+}
+
+.hide-btn {
+    display: none;
+}
+
+.end-of-results {
+    margin: 25vh 0;
+    font-size: 1.5rem;
+}
