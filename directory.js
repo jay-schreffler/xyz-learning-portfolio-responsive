@@ -67,8 +67,7 @@ nextPageBtn.addEventListener('click', () => {
     if(seed > 101) {
         //remove cards and next button
         cards.classList.add('hide-btn')
-        nextPageBtn.remove();
-        
+        nextPageBtn.classList.add('hide-btn')
         endOfResults.classList.add('end-of-results')
         resultsEnd.append(endOfResults);
         endOfResults.innerHTML = '<p>End of results.</p>'
@@ -76,7 +75,10 @@ nextPageBtn.addEventListener('click', () => {
 })
 
 prevousPageBtn.addEventListener('click', () => {
-    cards.innerHTML = ' ';
+    if(seed >= 100) {
+        prevousPageBtn.classList.add('hide-btn');
+    }
+        cards.innerHTML = ' ';
     cards.classList.remove('hide-btn')
     endOfResults.classList.remove('end-of-results')
     endOfResults.innerHTML = ' ';
