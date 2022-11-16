@@ -63,7 +63,7 @@ nextPageBtn.addEventListener('click', () => {
     }
     seed = seed + 1;
     getAllUsers(seed)
-    if(seed > 101) {
+    if(seed > 106) {
         //remove cards and next button
         cards.classList.add('hide-btn')
         nextPageBtn.classList.add('hide-btn')
