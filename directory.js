@@ -14,7 +14,7 @@ let seed = 100;
 
 function getAllUsers(seed) {
     fetch(`https://randomuser.me/api/?inc=name,phone,email,picture,location
-    /page=1&results=10&seed=${seed}`)
+    /page=1&results=12&seed=${seed}`)
     .then((res) => res.json())
     .then((data) => {
         const info = data.results;
@@ -63,7 +63,8 @@ nextPageBtn.addEventListener('click', () => {
     }
     seed = seed + 1;
     getAllUsers(seed)
-    if(seed > 106) {
+    
+    if(seed > 105) {
         //remove cards and next button
         cards.classList.add('hide-btn')
         nextPageBtn.classList.add('hide-btn')

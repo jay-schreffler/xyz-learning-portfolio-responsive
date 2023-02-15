@@ -91,6 +91,7 @@ main h1 {
 .page-nav {
     display: flex;
     justify-content: center;
+    height:10vh;
 }
 
 .btn-style {
@@ -113,3 +114,55 @@ main h1 {
     margin: 25vh 0;
     font-size: 1.5rem;
 }
+
+@media only screen and (min-width: 720px) and (max-width:1079px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 30vw 30vw;
+        justify-content: center;
+    }
+    .hide-btn {
+        display: none;
+    }
+
+    .end-of-results {
+        margin:15vh 0;
+        font-size: 1.5rem;
+    }
+
+    .page-nav {
+        height:10vh;
+    }
+  }
+
+  @media only screen and (min-width: 1080px) {
+    .cards {
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(3,25vw);
+        margin: auto;
+    }
+
+    .group-filter-title {
+        margin-bottom: 2%;
+    }
+
+    .card-wrapper {
+        margin: auto;
+    }
+
+    .hide-btn {
+        display: none;
+    }
+
+    .end-of-results {
+        margin:15vh 0;
+        font-size: 1.5rem;
+    }
+
+    .page-nav {
+        height:10vh;
+
+    }
+
+  }
